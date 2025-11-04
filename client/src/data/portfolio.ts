@@ -102,38 +102,42 @@ export const achievements = [
   },
 ];
 
-export const experience = [
+export const academics = [
   {
     id: 1,
-    company: "TechCorp Inc.",
-    role: "Senior Full-Stack Developer",
-    duration: "2021 - Present",
+    institution: "Stanford University",
+    degree: "Bachelor of Science in Computer Science",
+    duration: "2015 - 2019",
     description: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Mentored junior developers and conducted code reviews",
-      "Improved application performance by 40% through optimization",
+      "Graduated with Honors, GPA: 3.8/4.0",
+      "Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems",
+      "Member of Computer Science Club and Hackathon Team",
     ],
   },
   {
     id: 2,
-    company: "StartupHub",
-    role: "Frontend Developer",
-    duration: "2019 - 2021",
+    institution: "Lincoln High School",
+    degree: "High School Diploma",
+    duration: "2011 - 2015",
     description: [
-      "Built responsive web applications using React and TypeScript",
-      "Collaborated with designers to implement pixel-perfect UIs",
-      "Implemented CI/CD pipelines reducing deployment time by 60%",
+      "Graduated with Distinction",
+      "President of Technology Club",
+      "Won regional science fair for innovative app development project",
     ],
   },
+];
+
+export const experience = [
   {
-    id: 3,
-    company: "Digital Solutions",
-    role: "Junior Developer",
-    duration: "2018 - 2019",
+    id: 1,
+    company: "PadhaiAI",
+    role: "Software Development Intern",
+    duration: "3 Months",
     description: [
-      "Developed and maintained client websites and web applications",
-      "Worked with cross-functional teams to deliver projects on time",
-      "Gained proficiency in modern web development tools and practices",
+      "Developed and integrated AI-powered educational features into the platform",
+      "Collaborated with the development team to optimize user experience",
+      "Implemented responsive UI components using React and TypeScript",
+      "Participated in code reviews and agile development practices",
     ],
   },
 ];

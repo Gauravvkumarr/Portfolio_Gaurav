@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AchievementsSection from "@/components/AchievementsSection";
+import AcademicsSection from "@/components/AcademicsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <AchievementsSection />
+        <AcademicsSection />
         <ExperienceSection />
         <ContactSection />
       </main>

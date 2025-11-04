@@ -6,6 +6,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Academics", href: "#academics" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -19,7 +20,7 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ["home", "about", "projects", "experience", "contact"];
+      const sections = ["home", "about", "projects", "academics", "experience", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
