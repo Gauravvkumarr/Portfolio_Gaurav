@@ -1,0 +1,78 @@
+Build a fully functional and responsive personal portfolio website using React (JavaScript).
+
+Requirements:
+
+The website should be clean, minimal, and professional — no funky or pinchy colors.
+
+Use a modern color palette with soft gradients (like navy blue, slate gray, white, light cyan, or pastel purple).
+
+Include smooth animations and transitions using Framer Motion or CSS transitions.
+
+The site should be dynamic — data (like projects, skills, and achievements) should come from a JSON or state file so it’s easy to update later.
+
+Use React Router for navigation between sections/pages.
+
+Sections to Include:
+
+Home – Introduction, name, tagline, and a short bio with a call-to-action (e.g., “View My Work”).
+
+About Me – Personal details, academic background, and interests.
+
+Projects – Display at least 4 projects dynamically with title, tech stack, short description, and GitHub/demo links.
+
+Achievements – Cards or timeline of key achievements or certifications.
+
+Experience – Timeline view showing company/organization, role, and duration.
+
+Contact – A working contact form (name, email, message) that sends data via EmailJS or a backend API. Include clickable social icons (GitHub, LinkedIn, etc.).
+
+Footer – Copyright text with dynamic current year.
+
+Technical Stack:
+
+React (JavaScript)
+
+Tailwind CSS or Styled Components for styling
+
+Framer Motion for animations
+
+React Router for navigation
+
+Optional: EmailJS for contact form functionality
+
+Design Expectations:
+
+Clean, grid-based layout with balanced whitespace.
+
+Subtle hover effects, fade-ins, and slide animations.
+
+Use Google Fonts (e.g., Poppins, Inter, or Lato) for typography.
+
+Responsive for desktop, tablet, and mobile.
+
+Consistent spacing and color hierarchy across all sections.
+
+Deliverables:
+
+A complete React project with proper folder structure:
+
+src/
+├── components/
+├── pages/
+├── assets/
+├── data/
+├── App.js
+└── index.js
+
+
+Include example data in a data.js file for easy updates.
+
+Include comments explaining animation logic and reusable components.
+
+Optional Add-Ons:
+
+Add a “Scroll to Top” floating button.
+
+Add light/dark theme toggle using context or Zustand.
+
+Add meta tags and SEO optimization (React Helmet).
