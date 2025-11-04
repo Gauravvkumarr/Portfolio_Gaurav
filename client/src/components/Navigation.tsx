@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -48,77 +47,67 @@ export default function Navigation() {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else if (href === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" data-testid="link-home">
-            <span className="text-xl font-poppins font-semibold bg-gradient-to-r from-primary to-chart-2 bg-clip-text text-transparent cursor-pointer">
-              Portfolio
-            </span>
-          </Link>
-
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                data-testid={`link-${item.label.toLowerCase()}`}
-                className={`text-sm font-medium transition-colors relative hover-elevate px-3 py-2 rounded-md ${
-                  activeSection === item.href.substring(1) ||
-                  (item.href === "/" && activeSection === "")
-                    ? "text-foreground"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {item.label}
-                {(activeSection === item.href.substring(1) ||
-                  (item.href === "/" && activeSection === "")) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-chart-2 rounded-full" />
-                )}
-              </button>
-            ))}
-          </div>
-
-          <div className="md:hidden">
-            <Button
-              size="icon"
-              variant="ghost"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              data-testid="button-menu-toggle"
+    <>
+      <nav
+        className={`fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg shadow-lg"
+            : "bg-background/60 backdrop-blur-md"
+        } rounded-full border border-border px-8 py-3`}
+      >
+        <div className="hidden md:flex items-center gap-2">
+          {navItems.map((item) => (
+            <button
+              key={item.label}
+              onClick={() => scrollToSection(item.href)}
+              data-testid={`link-${item.label.toLowerCase()}`}
+              className={`px-4 py-2 text-sm font-medium transition-all rounded-full ${
+                activeSection === item.href.substring(1) ||
+                (item.href === "/" && activeSection === "")
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover-elevate"
+              }`}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
-          </div>
+              {item.label}
+            </button>
+          ))}
         </div>
-      </div>
+
+        <div className="md:hidden flex items-center">
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            data-testid="button-menu-toggle"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </Button>
+        </div>
+      </nav>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="md:hidden fixed top-24 left-1/2 -translate-x-1/2 z-40 bg-background/95 backdrop-blur-lg border border-border rounded-2xl shadow-lg w-[calc(100%-2rem)] max-w-sm">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
                 data-testid={`link-mobile-${item.label.toLowerCase()}`}
-                className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-md transition-colors hover-elevate ${
+                className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-colors hover-elevate ${
                   activeSection === item.href.substring(1) ||
                   (item.href === "/" && activeSection === "")
-                    ? "text-foreground bg-accent"
+                    ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground"
                 }`}
               >
@@ -128,6 +117,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 }
