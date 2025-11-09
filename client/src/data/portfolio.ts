@@ -76,7 +76,7 @@ export const projects = [
       "Collaborative project management tool with real-time updates, team collaboration, and analytics.",
     image: project4,
     techStack: ["React", "TailwindCSS", "Javascript"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Gauravvkumarr/Portfolio_Gaurav.git",
     demoUrl: "https://demo.example.com",
   },
   {
