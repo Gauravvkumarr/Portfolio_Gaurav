@@ -24,7 +24,14 @@ import {
   SiGraphql,
   SiWebpack,
   SiVite,
+  SiPostman,
+  SiKubernetes,
+  SiRedux,
 } from "react-icons/si";
+// Add this import
+import { FaJava } from "react-icons/fa";
+
+
 
 export interface Skill {
   name: string;
@@ -39,28 +46,28 @@ export interface SkillCategory {
 
 export const skillsData: SkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Languages & Core Technologies",
     skills: [
-      { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Java", icon: FaJava, color: "#f89820" },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-      { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Python", icon: SiPython, color: "#FFD43B" },
       { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
       { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
     ],
   },
   {
-    title: "Backend",
+    title: "Frameworks, Libraries & Tools",
     skills: [
+      { name: "React", icon: SiReact, color: "#61DAFB" },
       { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
       { name: "Express", icon: SiExpress, color: "#000000" },
-      { name: "Python", icon: SiPython, color: "#3776AB" },
-      { name: "Django", icon: SiDjango, color: "#092E20" },
-      { name: "Flask", icon: SiFlask, color: "#000000" },
-      { name: "PHP", icon: SiPhp, color: "#777BB4" },
-      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Postman", icon: SiPostman, color: "#EF5B25" },
+      { name: "Redux", icon: SiRedux, color: "#764abc" }
+     
+
     ],
   },
   {
@@ -69,16 +76,14 @@ export const skillsData: SkillCategory[] = [
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-      { name: "Redis", icon: SiRedis, color: "#DC382D" },
-      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
     ],
   },
   {
-    title: "Others",
+    title: "Build & Deployment Tools",
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
-      { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+      { name: "Kubernets", icon: SiKubernetes, color: "#326CE5" },
       { name: "Webpack", icon: SiWebpack, color: "#8DD6F9" },
       { name: "Vite", icon: SiVite, color: "#646CFF" },
     ],

@@ -38,7 +38,7 @@ export default function Footer() {
             className="text-sm text-muted-foreground text-center"
             data-testid="text-copyright"
           >
-            © {currentYear} Alex Rivera. All rights reserved.
+            © {currentYear} Gaurav Kumar. All rights reserved.
           </p>
         </div>
       </div>
